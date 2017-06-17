@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1B0F903EB308CF66A5AF846B /* Pods_WeatherStatistics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5D5F18E7BEC9768C461F32 /* Pods_WeatherStatistics.framework */; };
+		44BF10071EF5A7E40034B83B /* YearStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10061EF5A7E40034B83B /* YearStatistic.swift */; };
+		44BF10091EF5A80E0034B83B /* MonthStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10081EF5A80E0034B83B /* MonthStatistic.swift */; };
+		44BF100A1EF5A9940034B83B /* YearStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10061EF5A7E40034B83B /* YearStatistic.swift */; };
+		44BF100B1EF5A9960034B83B /* MeteoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C071EF4A7D500CA6D09 /* MeteoData.swift */; };
+		44BF100C1EF5A9B00034B83B /* MonthStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10081EF5A80E0034B83B /* MonthStatistic.swift */; };
+		44BF101E1EF5BFE20034B83B /* YearHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10191EF5BFE20034B83B /* YearHeaderView.swift */; };
+		44BF101F1EF5BFE20034B83B /* YearHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BF101A1EF5BFE20034B83B /* YearHeaderView.xib */; };
+		44BF10201EF5BFE20034B83B /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF101C1EF5BFE20034B83B /* MonthCell.swift */; };
+		44BF10211EF5BFE20034B83B /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44BF101D1EF5BFE20034B83B /* MonthCell.xib */; };
+		44BF10231EF5C00B0034B83B /* WeathrStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10221EF5C00B0034B83B /* WeathrStatisticViewController.swift */; };
+		44BF10251EF5C3130034B83B /* WeathrStatisticRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10241EF5C3130034B83B /* WeathrStatisticRootView.swift */; };
+		44BF102A1EF5CBAE0034B83B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10291EF5CBAE0034B83B /* NetworkManager.swift */; };
+		44BF102B1EF5CBAE0034B83B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10291EF5CBAE0034B83B /* NetworkManager.swift */; };
 		44CB23881EF0850D00B0B0B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB237F1EF0850D00B0B0B0 /* AppDelegate.swift */; };
 		44CB23891EF0850D00B0B0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CB23801EF0850D00B0B0B0 /* Assets.xcassets */; };
 		44CB238A1EF0850D00B0B0B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB23811EF0850D00B0B0B0 /* LaunchScreen.storyboard */; };
@@ -143,6 +156,16 @@
 		1C6B7CE364D100F6C3E87174 /* Pods-WeatherStatistics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherStatistics.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherStatistics/Pods-WeatherStatistics.release.xcconfig"; sourceTree = "<group>"; };
 		2B5D5F18E7BEC9768C461F32 /* Pods_WeatherStatistics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherStatistics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4035D52C43DA6469247C670F /* Pods-WeatherStatistics-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherStatistics-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherStatistics-IOS/Pods-WeatherStatistics-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		44BF10061EF5A7E40034B83B /* YearStatistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearStatistic.swift; sourceTree = "<group>"; };
+		44BF10081EF5A80E0034B83B /* MonthStatistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthStatistic.swift; sourceTree = "<group>"; };
+		44BF10191EF5BFE20034B83B /* YearHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearHeaderView.swift; sourceTree = "<group>"; };
+		44BF101A1EF5BFE20034B83B /* YearHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YearHeaderView.xib; sourceTree = "<group>"; };
+		44BF101C1EF5BFE20034B83B /* MonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		44BF101D1EF5BFE20034B83B /* MonthCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
+		44BF10221EF5C00B0034B83B /* WeathrStatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeathrStatisticViewController.swift; sourceTree = "<group>"; };
+		44BF10241EF5C3130034B83B /* WeathrStatisticRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeathrStatisticRootView.swift; sourceTree = "<group>"; };
+		44BF10261EF5C34A0034B83B /* WeatherStatistics-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeatherStatistics-Bridging-Header.h"; sourceTree = "<group>"; };
+		44BF10291EF5CBAE0034B83B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		44CB23661EF084B500B0B0B0 /* WeatherStatistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherStatistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CB237F1EF0850D00B0B0B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44CB23801EF0850D00B0B0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +297,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44BF10171EF5BFE20034B83B /* WeathrStatisticViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44BF10221EF5C00B0034B83B /* WeathrStatisticViewController.swift */,
+				44BF10241EF5C3130034B83B /* WeathrStatisticRootView.swift */,
+				44BF10181EF5BFE20034B83B /* MonthCell */,
+				44BF101B1EF5BFE20034B83B /* YearCell */,
+			);
+			name = WeathrStatisticViewController;
+			path = CitiesViewController/WeathrStatisticViewController;
+			sourceTree = "<group>";
+		};
+		44BF10181EF5BFE20034B83B /* MonthCell */ = {
+			isa = PBXGroup;
+			children = (
+				44BF10191EF5BFE20034B83B /* YearHeaderView.swift */,
+				44BF101A1EF5BFE20034B83B /* YearHeaderView.xib */,
+			);
+			path = MonthCell;
+			sourceTree = "<group>";
+		};
+		44BF101B1EF5BFE20034B83B /* YearCell */ = {
+			isa = PBXGroup;
+			children = (
+				44BF101C1EF5BFE20034B83B /* MonthCell.swift */,
+				44BF101D1EF5BFE20034B83B /* MonthCell.xib */,
+			);
+			path = YearCell;
+			sourceTree = "<group>";
+		};
 		44CB235D1EF084B500B0B0B0 = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +362,7 @@
 		44CB237E1EF0850D00B0B0B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				44BF10261EF5C34A0034B83B /* WeatherStatistics-Bridging-Header.h */,
 				44CB23971EF0886800B0B0B0 /* MeteorologicalStationList.plist */,
 				44CB237F1EF0850D00B0B0B0 /* AppDelegate.swift */,
 				44CB23801EF0850D00B0B0B0 /* Assets.xcassets */,
@@ -324,6 +378,7 @@
 			children = (
 				44CB23831EF0850D00B0B0B0 /* Main.storyboard */,
 				44CB23991EF0899100B0B0B0 /* CitiesViewController */,
+				44BF10171EF5BFE20034B83B /* WeathrStatisticViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -345,6 +400,8 @@
 				44E53C031EF4A6BF00CA6D09 /* City.swift */,
 				44E53C051EF4A7B600CA6D09 /* CityLocations.swift */,
 				44E53C071EF4A7D500CA6D09 /* MeteoData.swift */,
+				44BF10061EF5A7E40034B83B /* YearStatistic.swift */,
+				44BF10081EF5A80E0034B83B /* MonthStatistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				44CB23A61EF1CC0600B0B0B0 /* DataParser.swift */,
+				44BF10291EF5CBAE0034B83B /* NetworkManager.swift */,
 				44CB23A81EF1D28700B0B0B0 /* Constanst.swift */,
 			);
 			path = Contexts;
@@ -811,6 +869,8 @@
 				44CB24671EF1DE7700B0B0B0 /* Roboto-ThinItalic.ttf in Resources */,
 				44CB24661EF1DE7700B0B0B0 /* Roboto-Thin.ttf in Resources */,
 				44CB238A1EF0850D00B0B0B0 /* LaunchScreen.storyboard in Resources */,
+				44BF10211EF5BFE20034B83B /* MonthCell.xib in Resources */,
+				44BF101F1EF5BFE20034B83B /* YearHeaderView.xib in Resources */,
 				44CB246C1EF1DE7700B0B0B0 /* RobotoCondensed-LightItalic.ttf in Resources */,
 				44CB246A1EF1DE7700B0B0B0 /* RobotoCondensed-Italic.ttf in Resources */,
 			);
@@ -917,6 +977,7 @@
 				44CB247C1EF1DE7700B0B0B0 /* UIColor + Extension.swift in Sources */,
 				44CB24421EF1DE7700B0B0B0 /* DesignableUITextField.swift in Sources */,
 				44CB24841EF1DE7700B0B0B0 /* UIStoryboard + Extension.swift in Sources */,
+				44BF10201EF5BFE20034B83B /* MonthCell.swift in Sources */,
 				44CB24381EF1DE7700B0B0B0 /* FlipDismissAnimationControllerViewController.swift in Sources */,
 				44CB244C1EF1DE7700B0B0B0 /* ExpandButton.swift in Sources */,
 				44CB24521EF1DE7700B0B0B0 /* LeftArrowButton.swift in Sources */,
@@ -933,6 +994,7 @@
 				44CB24341EF1DE7700B0B0B0 /* LGHorizontalLinearFlowLayout.swift in Sources */,
 				44E53C081EF4A7D500CA6D09 /* MeteoData.swift in Sources */,
 				44CB243B1EF1DE7700B0B0B0 /* SlideInPresentationAnimator.swift in Sources */,
+				44BF10071EF5A7E40034B83B /* YearStatistic.swift in Sources */,
 				44CB24831EF1DE7700B0B0B0 /* UINib + Extension.swift in Sources */,
 				44CB246E1EF1DE7700B0B0B0 /* HeaderView.swift in Sources */,
 				44CB23A71EF1CC0600B0B0B0 /* DataParser.swift in Sources */,
@@ -949,13 +1011,17 @@
 				44CB247A1EF1DE7700B0B0B0 /* UIAllertViewController + Extension.swift in Sources */,
 				44CB244F1EF1DE7700B0B0B0 /* ANSRootView.m in Sources */,
 				44CB24371EF1DE7700B0B0B0 /* FlipApperdAnimationController.swift in Sources */,
+				44BF10251EF5C3130034B83B /* WeathrStatisticRootView.swift in Sources */,
 				44CB24871EF1DE7700B0B0B0 /* UITableView + LongPressMoveRow.swift in Sources */,
 				44CB248C1EF1DE7700B0B0B0 /* ImageLoader.swift in Sources */,
 				44E53C061EF4A7B600CA6D09 /* CityLocations.swift in Sources */,
 				44CB24551EF1DE7700B0B0B0 /* PaginatorView.swift in Sources */,
+				44BF10091EF5A80E0034B83B /* MonthStatistic.swift in Sources */,
+				44BF10231EF5C00B0034B83B /* WeathrStatisticViewController.swift in Sources */,
 				44CB24751EF1DE7700B0B0B0 /* FileManager + Extension.swift in Sources */,
 				44CB24401EF1DE7700B0B0B0 /* CustomPlayer.swift in Sources */,
 				44CB24781EF1DE7700B0B0B0 /* String + ParameterEncoding.swift in Sources */,
+				44BF102A1EF5CBAE0034B83B /* NetworkManager.swift in Sources */,
 				44CB23A91EF1D28700B0B0B0 /* Constanst.swift in Sources */,
 				44CB238D1EF0850D00B0B0B0 /* WeatherStatistics.xcdatamodeld in Sources */,
 				44CB24351EF1DE7700B0B0B0 /* CreditProgressView.swift in Sources */,
@@ -967,6 +1033,7 @@
 				44CB24721EF1DE7700B0B0B0 /* Date + Extension.swift in Sources */,
 				44CB24391EF1DE7700B0B0B0 /* FlipTransitionDelegate.swift in Sources */,
 				44CB24821EF1DE7700B0B0B0 /* UIImage + Extension.swift in Sources */,
+				44BF101E1EF5BFE20034B83B /* YearHeaderView.swift in Sources */,
 				44CB243E1EF1DE7700B0B0B0 /* SlideOutAnimationController.swift in Sources */,
 				44CB24711EF1DE7700B0B0B0 /* Array + Extension.swift in Sources */,
 				44CB24891EF1DE7700B0B0B0 /* UIViewController + Allert.swift in Sources */,
@@ -981,8 +1048,12 @@
 				44E53BFF1EF4907300CA6D09 /* CitySourceData.swift in Sources */,
 				44E53C001EF4908C00CA6D09 /* Constanst.swift in Sources */,
 				44E53C0B1EF529C200CA6D09 /* City.swift in Sources */,
+				44BF100A1EF5A9940034B83B /* YearStatistic.swift in Sources */,
+				44BF100C1EF5A9B00034B83B /* MonthStatistic.swift in Sources */,
+				44BF102B1EF5CBAE0034B83B /* NetworkManager.swift in Sources */,
 				44E53C0A1EF525F500CA6D09 /* String + Extension.swift in Sources */,
 				44E53C011EF490AE00CA6D09 /* DataParser.swift in Sources */,
+				44BF100B1EF5A9960034B83B /* MeteoData.swift in Sources */,
 				44E53C091EF51ED500CA6D09 /* CityLocations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1122,6 +1193,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Talantarium.WeatherStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/iosdeveloper/Documents/PrivateProjectsGit/WeatherStatistics/WeatherStatistics/WeatherStatistics/Resources/WeatherStatistics-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1137,6 +1209,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Talantarium.WeatherStatistics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/iosdeveloper/Documents/PrivateProjectsGit/WeatherStatistics/WeatherStatistics/WeatherStatistics/Resources/WeatherStatistics-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

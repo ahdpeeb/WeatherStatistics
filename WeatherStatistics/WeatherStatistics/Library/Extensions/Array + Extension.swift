@@ -15,9 +15,18 @@ extension Array where Element: Equatable {
             remove(at: index)
         }
     }
+    
+    
 }
 
 extension Array {
+    func splitedBy(_ chunkSize: Int) -> [[Element]] {
+        return stride(from: 0, to: self.count, by: chunkSize).map({ (startIndex) -> [Element] in
+            let endIndex = (startIndex.advanced(by: chunkSize) > self.count) ? self.count-startIndex : chunkSize
+            return Array(self[startIndex..<startIndex.advanced(by: endIndex)])
+        })
+    }
+    
     mutating func move(from formIndex: Int, to toIndex: Int) {
         insert(remove(at: formIndex), at: toIndex)
     }

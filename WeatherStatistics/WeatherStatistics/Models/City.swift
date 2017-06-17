@@ -8,9 +8,10 @@
 
 import Foundation
 
-struct City {
+class City {
     var name: String
     var location: CityLocations
+    var years: [YearStatistic] = []
     
     init(name: String, locations: CityLocations) {
         self.name = name

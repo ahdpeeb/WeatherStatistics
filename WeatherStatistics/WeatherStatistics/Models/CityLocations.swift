@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CityLocations {
+class CityLocations {
     var latitude: String
     var longitude: String
     var altitude: String

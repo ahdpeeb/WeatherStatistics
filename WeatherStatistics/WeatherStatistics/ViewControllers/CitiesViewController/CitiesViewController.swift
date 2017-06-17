@@ -20,13 +20,22 @@ class CitiesViewController: UIViewController {
     fileprivate var serchTextObservable = Variable("")
     fileprivate var viewModel: CitiesViewModel!
     
+    // MARK: ViewLifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.initialConfig()
-//        self.setUpViewModel()
-//        self.subscribeTableView()
-        self.load()
+        self.initialConfig()
+        self.setUpViewModel()
+        self.subscribeTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     // MARK: Private func
@@ -57,26 +66,6 @@ class CitiesViewController: UIViewController {
                 
         }.addDisposableTo(disposeBag)
     }
-    
-    //TEST: 
-    
-    func load() {
-        let testCity = CitySourceData(name: "Bradford", url: "http://www.metoffice.gov.uk/pub/data/weather/uk/climate/stationdata/bradforddata.txt")
-        DataParser.loadWeatherFor(city: testCity)
-            .asObservable()
-            .subscribe(onNext: { resnponce in
-                resnponce.map({ self.parseString($0) })
-            }, onError: { (error) in
-                print(error)
-            }).addDisposableTo(disposeBag)
-    }
-    
-    func parseString(_ string: String) {
-        let parser = DataParser(sourceString: string)
-        if let city = parser.city() {
-            print(city)
-        }
-    }
 }
 
 extension CitiesViewController: UISearchResultsUpdating {
@@ -88,8 +77,10 @@ extension CitiesViewController: UISearchResultsUpdating {
 extension CitiesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let model = self.viewModel.cities.value[indexPath.row]
-        print(model)
+        let sourceModel = self.viewModel.cities.value[indexPath.row]
+        let controller = UIStoryboard.controllerFromMainStorybourd(cls: WeathrStatisticViewController.self)
+        controller.sourceData = sourceModel
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
