@@ -109,6 +109,9 @@
 		44E53C041EF4A6BF00CA6D09 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C031EF4A6BF00CA6D09 /* City.swift */; };
 		44E53C061EF4A7B600CA6D09 /* CityLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C051EF4A7B600CA6D09 /* CityLocations.swift */; };
 		44E53C081EF4A7D500CA6D09 /* MeteoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C071EF4A7D500CA6D09 /* MeteoData.swift */; };
+		44E53C091EF51ED500CA6D09 /* CityLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C051EF4A7B600CA6D09 /* CityLocations.swift */; };
+		44E53C0A1EF525F500CA6D09 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB24181EF1DE7700B0B0B0 /* String + Extension.swift */; };
+		44E53C0B1EF529C200CA6D09 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E53C031EF4A6BF00CA6D09 /* City.swift */; };
 		4E1AB90189F9A44B8EB454FA /* Pods_WeatherStatistics_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC68B06AEDD9F27FBCB004D /* Pods_WeatherStatistics_IOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -977,7 +980,10 @@
 			files = (
 				44E53BFF1EF4907300CA6D09 /* CitySourceData.swift in Sources */,
 				44E53C001EF4908C00CA6D09 /* Constanst.swift in Sources */,
+				44E53C0B1EF529C200CA6D09 /* City.swift in Sources */,
+				44E53C0A1EF525F500CA6D09 /* String + Extension.swift in Sources */,
 				44E53C011EF490AE00CA6D09 /* DataParser.swift in Sources */,
+				44E53C091EF51ED500CA6D09 /* CityLocations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

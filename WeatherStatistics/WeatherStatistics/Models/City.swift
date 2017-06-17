@@ -10,7 +10,10 @@ import Foundation
 
 struct City {
     var name: String
-    init(name: String) {
+    var location: CityLocations
+    
+    init(name: String, locations: CityLocations) {
         self.name = name
+        self.location = locations
     }
 }

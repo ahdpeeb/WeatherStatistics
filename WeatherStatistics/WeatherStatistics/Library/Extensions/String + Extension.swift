@@ -23,6 +23,11 @@ extension String {
         return self.substring(to: self.index(before: self.endIndex))
     }
     
+    func removeFirstChar() -> String {
+        var string = self
+        return String(string.remove(at: string.startIndex))
+    }
+    
     func nsRange(from range: Range<String.Index>) -> NSRange {
         let from = range.lowerBound.samePosition(in: utf16)
         let to = range.upperBound.samePosition(in: utf16)

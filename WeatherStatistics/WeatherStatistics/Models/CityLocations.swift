@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct CityLocations {
+    var latitude: String
+    var longitude: String
+    var altitude: String
+    
+    init(latitude: String, longitude: String, altitude: String) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.altitude = altitude
+    }
+}

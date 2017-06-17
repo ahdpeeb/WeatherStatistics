@@ -73,6 +73,9 @@ class CitiesViewController: UIViewController {
     
     func parseString(_ string: String) {
         let parser = DataParser(sourceString: string)
+        if let city = parser.city() {
+            print(city)
+        }
     }
 }
 
