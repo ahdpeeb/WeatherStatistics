@@ -30,19 +30,11 @@ class CitiesViewController: UIViewController {
         self.subscribeTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
     // MARK: Private func
     
     private func initialConfig() {
         self.searchController.searchResultsUpdater = self
-        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.dimsBackgroundDuringPresentation = true
         self.definesPresentationContext = true
         
         let tableView = self.tableView!

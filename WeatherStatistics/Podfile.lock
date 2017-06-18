@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (4.4.0)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
+  - Material (2.6.3):
+    - Material/Core (= 2.6.3)
+  - Material/Core (2.6.3)
   - RxAlamofire (3.0.2):
     - RxAlamofire/Core (= 3.0.2)
   - RxAlamofire/Core (3.0.2):
@@ -11,16 +17,20 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - Charts
+  - Material (~> 2.0)
   - RxAlamofire
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
   RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
 
-PODFILE CHECKSUM: 1f2afeb93ca9ec03c448102bc552c323c36790cc
+PODFILE CHECKSUM: 8e8162c660a552153dd8efa250dc8e9ad340430d
 
 COCOAPODS: 1.1.1

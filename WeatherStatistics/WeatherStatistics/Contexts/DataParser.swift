@@ -69,7 +69,7 @@ class DataParser {
         let month = Int(components[1])
         let tmax = Float(components[2])
         let tmin = Float(components[3])
-        let days = Int(components[4])
+        let days = Float(components[4])
         let rainMM = Float(components[5])
         let sunH = Float(components[6])
         return MonthStatistic(month: month, tmax: tmax, tmin: tmin, days: days, rainMM: rainMM, sunH: sunH)

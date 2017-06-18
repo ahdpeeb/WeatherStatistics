@@ -17,7 +17,7 @@ extension UIViewController {
     
     typealias RepeatAction = (_ sender: UIAlertAction) -> ()
     func presentRepeatErrorController(title: String = "Ошибка", error: Error, titleForAction: String = "Повторить", action: @escaping RepeatAction) {
-        var message = ""
+        let message = ""
 //        if let RXError = error as? BaseViewModel.RxRequstError {
 //            message = RXError.debugDescription
 //        } else {

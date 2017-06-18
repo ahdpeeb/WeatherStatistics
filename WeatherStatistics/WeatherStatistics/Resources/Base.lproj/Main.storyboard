@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CitiesViewController" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="CitiesViewController" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BfW-kx-2AT"/>
                         <viewControllerLayoutGuide type="bottom" id="3to-iQ-CSl"/>
@@ -21,13 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MYX-R6-PVU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MYX-R6-PVU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.90980392160000001" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3to-iQ-CSl" firstAttribute="top" secondItem="MYX-R6-PVU" secondAttribute="bottom" id="3bP-zL-eTv"/>
+                            <constraint firstItem="MYX-R6-PVU" firstAttribute="top" secondItem="BfW-kx-2AT" secondAttribute="bottom" id="Lwi-lK-twI"/>
+                            <constraint firstAttribute="trailing" secondItem="MYX-R6-PVU" secondAttribute="trailing" id="fDq-cX-R0v"/>
+                            <constraint firstItem="MYX-R6-PVU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wLj-eN-r5c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GZH-Om-NcC"/>
                     <connections>
@@ -36,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21.25" y="42.243333333333332"/>
+            <point key="canvasLocation" x="20.5" y="41.5"/>
         </scene>
         <!--Weathr Statistic View Controller-->
         <scene sceneID="oAK-sP-bMJ">
@@ -49,12 +55,174 @@
                     <view key="view" contentMode="scaleToFill" id="GqI-zO-7k9" customClass="WeathrStatisticRootView" customModule="WeatherStatistics" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-GM-drt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IbI-GM-drt" firstAttribute="top" secondItem="XNr-6r-9xz" secondAttribute="bottom" id="43y-Qz-5iV"/>
+                            <constraint firstItem="upi-RM-c3c" firstAttribute="top" secondItem="IbI-GM-drt" secondAttribute="bottom" id="KqI-Sj-OZy"/>
+                            <constraint firstItem="IbI-GM-drt" firstAttribute="leading" secondItem="GqI-zO-7k9" secondAttribute="leading" id="bUd-wt-m8Q"/>
+                            <constraint firstAttribute="trailing" secondItem="IbI-GM-drt" secondAttribute="trailing" id="zHX-Oi-pOL"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="frameView" destination="IbI-GM-drt" id="9ch-aS-5id"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mN5-EU-if8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="49"/>
+            <point key="canvasLocation" x="554.5" y="48.5"/>
+        </scene>
+        <!--WeatherСhart ViewСontroller-->
+        <scene sceneID="nhX-OW-tI9">
+            <objects>
+                <viewController storyboardIdentifier="WeatherСhartViewСontroller" id="dF9-QI-lB9" customClass="WeatherСhartViewСontroller" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5qC-CF-odL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zdu-l8-fPo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qZO-52-rOp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-DR-UrD">
+                                <rect key="frame" x="36" y="257.5" width="303" height="152"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-wa-6d5">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="max t chart">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Dnd-kI-IBr" kind="modal" modalTransitionStyle="crossDissolve" id="ScJ-ay-DY5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-m6-Rhd">
+                                        <rect key="frame" x="0.0" y="38" width="303" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la8-mF-f8e">
+                                        <rect key="frame" x="0.0" y="76" width="303" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-rQ-13z">
+                                        <rect key="frame" x="0.0" y="114" width="303" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vn0-DR-UrD" secondAttribute="trailing" constant="20" id="0Z4-rK-ACI"/>
+                            <constraint firstItem="Vn0-DR-UrD" firstAttribute="centerX" secondItem="qZO-52-rOp" secondAttribute="centerX" id="8dv-Bh-YXD"/>
+                            <constraint firstItem="Vn0-DR-UrD" firstAttribute="centerY" secondItem="qZO-52-rOp" secondAttribute="centerY" id="Y1f-PW-q3B"/>
+                            <constraint firstItem="Vn0-DR-UrD" firstAttribute="leading" secondItem="qZO-52-rOp" secondAttribute="leadingMargin" constant="20" id="mpF-kx-czg"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zo7-7Y-FUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5" y="476.5"/>
+        </scene>
+        <!--Max Chart View Controller-->
+        <scene sceneID="Wwp-FZ-8Rp">
+            <objects>
+                <viewController storyboardIdentifier="TMaxChartViewController" id="Dnd-kI-IBr" customClass="TMaxChartViewController" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zTt-3d-fDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="V7e-b3-ctB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZYe-u6-XfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OH2-6P-Lmx" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="375" height="565"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7Y-DL-0uI">
+                                <rect key="frame" x="161" y="605" width="52" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="EXIT"/>
+                                <connections>
+                                    <action selector="exitButtonAction" destination="Dnd-kI-IBr" eventType="touchUpInside" id="Wwi-A0-B45"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V7e-b3-ctB" firstAttribute="top" secondItem="C7Y-DL-0uI" secondAttribute="bottom" constant="20" id="67j-hf-PHW"/>
+                            <constraint firstItem="C7Y-DL-0uI" firstAttribute="centerX" secondItem="ZYe-u6-XfZ" secondAttribute="centerX" id="BtV-Hd-zCf"/>
+                            <constraint firstItem="C7Y-DL-0uI" firstAttribute="top" secondItem="OH2-6P-Lmx" secondAttribute="bottom" constant="20" id="EHY-0v-8lB"/>
+                            <constraint firstAttribute="trailing" secondItem="OH2-6P-Lmx" secondAttribute="trailing" id="SwW-6F-wd5"/>
+                            <constraint firstItem="OH2-6P-Lmx" firstAttribute="top" secondItem="ZYe-u6-XfZ" secondAttribute="top" constant="20" id="WbE-YU-ZYk"/>
+                            <constraint firstItem="OH2-6P-Lmx" firstAttribute="leading" secondItem="ZYe-u6-XfZ" secondAttribute="leading" id="dWo-hg-3Cf"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="barChartView" destination="OH2-6P-Lmx" id="EDa-VW-k0g"/>
+                        <outlet property="exitButton" destination="C7Y-DL-0uI" id="O4g-1M-PwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGk-Hf-U48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.5" y="476.5"/>
+        </scene>
+        <!--Weather List View Controller-->
+        <scene sceneID="Gnj-w7-LrH">
+            <objects>
+                <viewController storyboardIdentifier="WeatherListViewController" id="Pk3-85-SCH" customClass="WeatherListViewController" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rrS-uW-a94"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Ro-5p-fxN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EPI-nV-obe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G37-Po-30e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pk3-85-SCH" id="jJo-yw-DFl"/>
+                                    <outlet property="delegate" destination="Pk3-85-SCH" id="tZZ-Hb-bYO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Ro-5p-fxN" firstAttribute="top" secondItem="G37-Po-30e" secondAttribute="bottom" id="12B-Z5-V0Q"/>
+                            <constraint firstItem="G37-Po-30e" firstAttribute="leading" secondItem="EPI-nV-obe" secondAttribute="leading" id="O0S-3E-ukg"/>
+                            <constraint firstAttribute="trailing" secondItem="G37-Po-30e" secondAttribute="trailing" id="XoF-VP-ai2"/>
+                            <constraint firstItem="G37-Po-30e" firstAttribute="top" secondItem="rrS-uW-a94" secondAttribute="bottom" id="sEM-nP-f2g"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="G37-Po-30e" id="IJE-wV-PYg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qu4-sp-nxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="-256"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ipx-s3-NXF">

@@ -11,10 +11,22 @@ import Foundation
 class YearStatistic {
     var year: Int
     var mounthStatistic: [MonthStatistic] = []
-    var statisticVisible = false
+    var isContentVisible = true
     
     init(year: Int) {
         self.year = year
+    }
+    
+    //MARK: Computed properties 
+    
+    var anualTmax: Float { return self.annualRate(rates: mounthStatistic.flatMap({ $0.tmax })) }
+    var anualTmix: Float { return self.annualRate(rates: mounthStatistic.flatMap({ $0.tmin })) }
+    var anualRainMM: Float { return self.annualRate(rates: mounthStatistic.flatMap({ $0.rainMM })) }
+    
+    private func annualRate(rates: [Float]) -> Float {
+        let count = Float(rates.count)
+        let rateSumm = rates.reduce(0, +)
+        return (rateSumm / count)
     }
 }
 
@@ -23,3 +35,5 @@ extension YearStatistic: Equatable {
         return lhs.year == rhs.year
     }
 }
+
+

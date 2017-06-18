@@ -8,7 +8,7 @@
 
 import Foundation
 
-class City {
+class City: NSObject {
     var name: String
     var location: CityLocations
     var years: [YearStatistic] = []

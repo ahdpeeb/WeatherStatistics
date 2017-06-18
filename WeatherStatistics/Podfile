@@ -7,8 +7,8 @@ target 'WeatherStatistics' do
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'RxAlamofire'
-
-
+  pod 'Material', '~> 2.0'
+  pod 'Charts'
 end
 
 target 'WeatherStatistics-IOS' do
@@ -17,6 +17,4 @@ target 'WeatherStatistics-IOS' do
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'RxAlamofire'
-
-
 end
