@@ -30,6 +30,7 @@
 		44BF10621EF660C70034B83B /* Arifmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10611EF660C70034B83B /* Arifmetic.swift */; };
 		44BF10631EF661960034B83B /* Arifmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10611EF660C70034B83B /* Arifmetic.swift */; };
 		44BF10661EF697020034B83B /* TMaxChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10651EF697020034B83B /* TMaxChartViewController.swift */; };
+		44BF10691EF7071F0034B83B /* TMinChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF10681EF7071F0034B83B /* TMinChartViewController.swift */; };
 		44CB23881EF0850D00B0B0B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB237F1EF0850D00B0B0B0 /* AppDelegate.swift */; };
 		44CB23891EF0850D00B0B0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CB23801EF0850D00B0B0B0 /* Assets.xcassets */; };
 		44CB238A1EF0850D00B0B0B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB23811EF0850D00B0B0B0 /* LaunchScreen.storyboard */; };
@@ -179,6 +180,7 @@
 		44BF105C1EF653840034B83B /* YearHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YearHeaderView.xib; sourceTree = "<group>"; };
 		44BF10611EF660C70034B83B /* Arifmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arifmetic.swift; sourceTree = "<group>"; };
 		44BF10651EF697020034B83B /* TMaxChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMaxChartViewController.swift; sourceTree = "<group>"; };
+		44BF10681EF7071F0034B83B /* TMinChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMinChartViewController.swift; sourceTree = "<group>"; };
 		44CB23661EF084B500B0B0B0 /* WeatherStatistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherStatistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CB237F1EF0850D00B0B0B0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44CB23801EF0850D00B0B0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			children = (
 				44BF10531EF5CF950034B83B /* WeatherСhartViewСontroller.swift */,
 				44BF10651EF697020034B83B /* TMaxChartViewController.swift */,
+				44BF10681EF7071F0034B83B /* TMinChartViewController.swift */,
 			);
 			name = "WeatherСhartViewСontroller";
 			path = "WeathrСhartViewСontroller";
@@ -998,6 +1001,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CB247B1EF1DE7700B0B0B0 /* UICollectionView + Extension.swift in Sources */,
+				44BF10691EF7071F0034B83B /* TMinChartViewController.swift in Sources */,
 				44BF10661EF697020034B83B /* TMaxChartViewController.swift in Sources */,
 				44CB24861EF1DE7700B0B0B0 /* UITableView + Extension.swift in Sources */,
 				44CB24701EF1DE7700B0B0B0 /* VisibleButton.swift in Sources */,

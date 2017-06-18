@@ -14,10 +14,7 @@ class WeatherСhartViewСontroller: UIViewController, WeathrStatisticProtocol {
     @IBOutlet var tmaxChartButton: UIButton!
     @IBOutlet var tminChartButton: UIButton!
     
-    var city: City? {
-        didSet {
-        }
-    }
+    var city: City?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -17,7 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
-  - Charts
+  - Charts (~> 3.0.1)
   - Material (~> 2.0)
   - RxAlamofire
   - RxCocoa (~> 3.0)
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
 
-PODFILE CHECKSUM: 8e8162c660a552153dd8efa250dc8e9ad340430d
+PODFILE CHECKSUM: d7e559e1309f27040500e6a3ad65d4654af1d435
 
 COCOAPODS: 1.1.1

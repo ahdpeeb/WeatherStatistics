@@ -18,7 +18,8 @@ class TMaxChartViewController: UIViewController, WeathrStatisticProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setTmaxChart()
+        self.maxChartViewConfig()
+        self.updateChartView()
     }
     
     //MARK: Actions
@@ -32,28 +33,22 @@ class TMaxChartViewController: UIViewController, WeathrStatisticProtocol {
         barChartView.backgroundColor = UIColor.white
     }
     
-    func setTmaxChart() {
-//        guard let seletedCity = city else { return }
-        let years: [Double] = [1.0, 2.2, 3.3, 4.5, 5.0, 6.0]
-            //seletedCity.years.flatMap({ Double($0.year) })
-//        print(years)
-        let anuarlTMax: [Double] = [10.3, 20.2, 30.4, 40.5, 50.6, 60.7] //seletedCity.years.flatMap({ Double($0.anualTmax) })
-//        print(anuarlTMax)
-        
+    func updateChartView() {
         var dataEntries: [BarChartDataEntry] = []
+        guard let seletedCity = city else { return }
+        let years: [Double] = seletedCity.years.flatMap({ Double($0.year) })
+        let anuarlTMax: [Double] = seletedCity.years.flatMap({ Double($0.anualTmax) })
         
-        for inx in 0 ..< years.count {
-            let dataEntry = BarChartDataEntry(x:  years[inx], yValues: [anuarlTMax[inx]])
+        for i in 0..<years.count {
+            let dataEntry = BarChartDataEntry(x: years[i], y: anuarlTMax[i])
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Temperature indicators")
-        chartDataSet.colors = ChartColorTemplates.pastel()
-        chartDataSet.valueTextColor = UIColor.black
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Maximum temperature statistic")
+        chartDataSet.colors = ChartColorTemplates.vordiplom()
         
-        let charData = ChartData(dataSet: chartDataSet)
+        let chartData = BarChartData(dataSet: chartDataSet)
         
-        barChartView.data = charData
+        barChartView.data = chartData
     }
-
 }

@@ -32,6 +32,9 @@ class WeathrStatisticViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let name = sourceData?.name
+        self.title = name
         self.setContentTabBarControllers()
         self.loadWeatherStatistic()
     }
