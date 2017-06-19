@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-DR-UrD">
-                                <rect key="frame" x="36" y="257.5" width="303" height="152"/>
+                                <rect key="frame" x="36" y="276.5" width="303" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-wa-6d5">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="38"/>
@@ -115,16 +115,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="la8-mF-f8e">
                                         <rect key="frame" x="0.0" y="76" width="303" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <state key="normal" title="Annual sunH. chart">
+                                        <state key="normal" title="Annual rain chart">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-rQ-13z">
-                                        <rect key="frame" x="0.0" y="114" width="303" height="38"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <state key="normal" title="babalbalbal">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <connections>
+                                            <segue destination="rcq-mO-A4u" kind="modal" modalTransitionStyle="crossDissolve" id="48l-kT-uBP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -184,7 +180,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-d5-e1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="493"/>
+            <point key="canvasLocation" x="1598" y="477"/>
+        </scene>
+        <!--RainMMC Hart View Controller-->
+        <scene sceneID="7DL-42-clW">
+            <objects>
+                <viewController storyboardIdentifier="RainMMCHartViewController" id="rcq-mO-A4u" customClass="RainMMCHartViewController" customModule="WeatherStatistics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hFP-DF-Ary"/>
+                        <viewControllerLayoutGuide type="bottom" id="ttw-ZS-bI1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uDU-OH-joC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To2-py-ImW" customClass="BubbleChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="40" width="375" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7O-xs-eza">
+                                <rect key="frame" x="161" y="605" width="52" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="EXIT"/>
+                                <connections>
+                                    <action selector="exitButtonAction" destination="rcq-mO-A4u" eventType="touchUpInside" id="suR-t6-qd6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="To2-py-ImW" secondAttribute="trailing" id="6gF-KS-SKN"/>
+                            <constraint firstItem="To2-py-ImW" firstAttribute="leading" secondItem="uDU-OH-joC" secondAttribute="leading" id="9JM-7S-Ppz"/>
+                            <constraint firstItem="H7O-xs-eza" firstAttribute="top" secondItem="To2-py-ImW" secondAttribute="bottom" constant="20" id="FtK-1Z-ewE"/>
+                            <constraint firstItem="ttw-ZS-bI1" firstAttribute="top" secondItem="H7O-xs-eza" secondAttribute="bottom" constant="20" id="KlU-zp-QLc"/>
+                            <constraint firstItem="H7O-xs-eza" firstAttribute="centerX" secondItem="uDU-OH-joC" secondAttribute="centerX" id="cTY-cc-7l0"/>
+                            <constraint firstItem="To2-py-ImW" firstAttribute="top" secondItem="hFP-DF-Ary" secondAttribute="bottom" constant="20" id="jmK-gY-Er7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="To2-py-ImW" id="Zxx-eW-f0f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8v-g4-yVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="1315"/>
         </scene>
         <!--Max Chart View Controller-->
         <scene sceneID="Wwp-FZ-8Rp">

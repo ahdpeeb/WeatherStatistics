@@ -13,6 +13,7 @@ import Charts
 class WeatherСhartViewСontroller: UIViewController, WeathrStatisticProtocol {
     @IBOutlet var tmaxChartButton: UIButton!
     @IBOutlet var tminChartButton: UIButton!
+    @IBOutlet var anuarRainChartButton: UIButton!
     
     var city: City?
     
