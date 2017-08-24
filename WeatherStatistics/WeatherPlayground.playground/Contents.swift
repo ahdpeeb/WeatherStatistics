@@ -12,3 +12,6 @@ let diposeBag = DisposeBag()
 
 // test commit one 
 print("commit")
+
+// test commit two
+print("commit 2 ")
