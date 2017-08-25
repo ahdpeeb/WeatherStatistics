@@ -21,6 +21,7 @@ class DataParser {
         guard let lowerBound = sourceString.range(of: "Location")?.lowerBound,
             let upperBounds = sourceString.range(of: "Estimated")?.lowerBound else { return nil }
         return sourceString.substring(with: lowerBound..<upperBounds)
+        
     }
     
     private func cityWeatherStatisticRaw() -> String? {
